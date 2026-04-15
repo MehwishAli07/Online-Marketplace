@@ -1,0 +1,42 @@
+/*Styling relating to the filter button (Caden Fontenot) */
+
+.hidden{
+	display: none;
+}
+
+#filterList {
+	top: 100%;
+	left: 0%;
+
+	flex-direction: column;
+	margin: 20px auto;
+	position: absolute;
+	background: white;
+	border: 1px solid black;
+	padding: 5px;
+	list-style: none;
+	margin: 0;
+	
+	
+}
+
+#filterList label {
+	display: block;
+	padding: 4px;
+	cursor: pointer;
+}
+
+#filterList li {
+	border-top: 1px solid black;
+}
+
+#filterList label:hover {
+	background-color: #e6f0ff; /*The lighter tone of blue as a highlight could help with the visuals */
+}
+
+input[type="checkbox"] {
+	
+	width: 12px;
+	Height: 8px;
+	accent-color: #f96b13;
+}
