@@ -1,9 +1,14 @@
+/* import font from google fonts */
+@import url('https://fonts.googleapis.com/css2?family=ADLaM+Display&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 /* Reset default margin and padding for the whole page */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "ADLaM Display", system-ui;
 }
+
 
 /* styling for the page to fill the full viewport and prevent overflow */
 html, body {
@@ -21,6 +26,9 @@ body {
 /* main section take the remaining space between footer and header */
 main {
     flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 /*header background and height setup */
@@ -179,7 +187,201 @@ dialog::backdrop {
     background: rgba(0, 0, 0, 0.5);
 }
 
-/* samllers screens layout adjustments */
+/* main content layout for homepage */
+main .category-box{
+    width: 90%;
+    max-width: 1200px;
+    margin: -20px auto;
+    padding: 5px 10px;
+    border: 2px solid #6f7681;
+    border-radius: 6px;
+    background-color: #dfe3e8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/*Categories section:links */
+/* used flexbox for responsive wrapping and centered alignment */
+.category-box .category-ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.category-ul li a{
+    text-decoration: none;
+    color: black;
+    padding: 8px 5px;
+    display:flex;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* hover effect */
+.category-ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Ad banner Section Layout */
+.Ad-box figure{
+    width: 100%;
+    height: 100%;          
+    margin: 0;             
+    display: flex;         
+    justify-content: center;
+}
+
+/* used flexbox for responsiveness */
+.Ad-box{
+    width: 90%;
+    height: 150px;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0;
+    border: 2px solid rgb(239, 239, 224);
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ad box layout */
+.Ad-box img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 6px;
+}
+
+/* Main products categories */
+/* Frid for resposiveness to auto fit based on screen size */
+main .main-products{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+/* links style */
+.main-products .mainprod_link{
+    width: 100%;
+    height: 250px;
+    position: relative;      
+    overflow: hidden;
+    cursor: pointer;
+    border: 1px solid black;
+    transition: all 0.3s ease;
+}
+
+/* fit image according to box */
+.mainprod_link img {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+}
+
+/* text style-overlay on image */
+.mainprod_link h3{
+    position: absolute;      
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #e0e2e7;
+    font-size: 18px;
+    margin: 0;
+    text-align: center;
+    z-index: 1;    
+}
+
+/* hover effect */
+.mainprod_link:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+}
+
+/* Popular products layout */
+main .popular_prod{
+    width:95%;
+    max-width: 1200px;
+    margin: auto;
+    margin-bottom: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    border: 2px solid #ffd6f5;
+    border-radius: 6px;
+    background-color: #fff0f0;
+}
+
+/* heading style */
+.popular_prod h2 {
+    padding: 16px 20px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    width: 100%;
+    font-size: 22px;
+}
+
+/* individual cards layout */
+.popular_prod .trending_prod {
+    /*Shrink/grow with base 200px*/
+    flex: 0 1 200px;  
+    max-width: 220px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: all 0.3s ease;
+
+}
+
+/* style for names of products */
+.trending_prod h3{
+    padding: 12px;
+    text-align: center;
+    font-size: 16px;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    text-decoration: underline;
+    text-decoration-color: none;
+}
+
+/* fit image according to box size */
+.trending_prod img { 
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border: 2px solid #6f7681;
+    border-radius: 10px;
+}
+
+/* hover effect for each car */
+.trending_prod:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    border-radius: 10px;
+}
+
+
+/* smallers screens layout adjustments */
+/* mobile responsive adjustments */
 @media (max-width: 768px) {
     .navbar {
         justify-content: center;
@@ -202,4 +404,29 @@ dialog::backdrop {
     .search-box .search-input {
         min-width: 140px;
     }
+
 }
+
+/* Mobile: Slightly shorter ad */
+@media (max-width: 768px) {
+    .Ad-box {
+        width: 95%;
+        height: 120px;      
+        margin: 15px auto;
+    }
+}
+
+/* Tablet size */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .Ad-box {
+        height: 140px;
+    }
+}
+
+/* Desktop: Full size */
+@media (min-width: 1025px) {
+    .Ad-box {
+        height: 150px;
+    }
+}
+
