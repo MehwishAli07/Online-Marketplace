@@ -20,16 +20,17 @@
         <nav class="navbar">
             <!-- Website logo: links back to the homepage -->
             <a href="index.html" class="logo-link">
-                <img class="logo" src="../images/logo_image.png" alt="BAYOUstore logo">
+                <img class="logo" src="images/logo_image.png" alt="BAYOUstore logo">
             </a>
 
             <!-- links to different website pages -->
             <ul class="nav-links">
+                <!-- Seller page is available without login for now(login logic will be added later) -->
                 <li><button onclick="location.href='seller.html'">Sell</button></li>
-                <li><button>Account</button></li>
+                <li><button >Account</button></li>
                 <!-- cart button with an icon image -->
                 <li><button class="cart-button" onclick="location.href='cart.html'">
-                        <img src="../images/cart.png" alt="Cart">
+                        <img src="images/cart.png" alt="Cart">
                     </button></li>
             </ul>
         </nav>
@@ -48,8 +49,74 @@
 
     <!-- include the main content of the page -->
     <main>
+        <!-- categories section -->
+         <!-- these links will direct to product listing page having all the categories -->
+          <!-- does not work because of no products at the moment -->
+        <section class="category-box">
+            <ul class="category-ul">
+                <li><a href="product.html">Clothes</a></li>
+                <li><a href="product.html">Shoes</a></li>
+                <li><a href="product.html">Accessories</a></li>
+                <li><a href="product.html">Home and Garden</a></li>
+                <li><a href="product.html">Groceries</a></li>
+                <li><a href="product.html">School supplies</a></li>
+            </ul>
+        </section>
+
+        <!--ad section -->
+        <section class="Ad-box">
+            <figure>
+                <img src="images/Ad_image.png" alt="Ad Banner">
+            </figure>
+        </section>
+
+        <!--Main products section -->
+        <!-- does not work because of no products at moment -->
+         <section class="main-products">
+            <article class="mainprod_link">
+                <a href="product.html"><img src="images/Men.jpeg" alt="Men Products"><h3>MEN</h3></a>
+            </article>
+
+            <article class="mainprod_link">
+                <a href="product.html"><img src="images/Women.jpeg" alt="Women Products"><h3>WOMEN</h3></a>
+            </article>
+
+            <article class="mainprod_link">
+                <a href="product.html"><img src="images/Kids.jpeg" alt="Kids Products"><h3>KIDS</h3></a>
+            </article>
+
+            <article class="mainprod_link">
+                <a href="product.html"><img src="images/HomeGoods.jpg" alt="Home Products"><h3>HOME</h3></a>
+            </article>
+         </section>
+
+         <!-- popular products section -->
+          <!-- does not work becasue of no products at the moment -->
+          <section class="popular_prod">
+            <h2>Popular Products</h2>
+            <article class="trending_prod">
+                <a href="product.html"><img src="images/Shoe_popular.jpg" alt="Trending footwear"><h3>Sneakers</h3></a>
+            </article>
+
+            <article class="trending_prod">
+                <a href="product.html"><img src="images/Travelbag_popular.jpg" alt="Trending Bag"><h3>Travel bag</h3></a>
+            </article>
+
+            <article class="trending_prod">
+                <a href="product.html"><img src="images/Sunglasses_popular.jpg" alt="Trending Sunglasses"><h3>Sunglasses</h3></a>
+            </article>
+
+            <article class="trending_prod">
+                <a href="product.html"><img src="images/MenWear_Popular.jpg" alt="Trending Shirts"><h3>Polo MenShirt</h3></a>
+            </article>
+
+            <article class="trending_prod">
+                <a href="product.html"><img src="images/Notebooks_popular.jpg" alt="Trneding School Supplies"><h3>Notebook</h3></a>
+            </article>
+          </section>
 
     </main>
+
 
     <!-- Footer: with site details -->
     <footer class="footer">
