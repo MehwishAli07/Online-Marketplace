@@ -340,7 +340,7 @@ main .popular_prod {
 
 /* individual cards layout */
 .popular_prod .trending_prod {
-    /*Shrink/grow with base 200px*/
+    /*grow with base 200px*/
     flex: 0 1 200px;
     max-width: 220px;
     display: flex;
@@ -544,7 +544,6 @@ main .seller-profile {
     padding: 12px 24px;
     border-radius: 8px;
     font-size: 14px;
-    font-weight: 600;
     cursor: pointer;
     margin-top: 15px;
     text-transform: uppercase;

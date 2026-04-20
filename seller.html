@@ -8,7 +8,7 @@
     <meta name="description"
         content="BAYOUstore is an online marketplace where users can browse products, sell products, view product details,and manage purchasing with cart and checkout.">
     <meta name="keywords" content="marketplace, shopping, products, ecommerce, BAYOUstore">
-    <title>BAYOUstore</title>
+    <title>BAYOUstore | Sell</title>
     <!-- External CSS link -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -69,7 +69,7 @@
         <section class="add-product">
             <button class="add-btn" onclick="toggleForm()">+ Add Product</button>
 
-            <!-- Form for adding Product -->
+            <!-- Form for adding Product(will not actually add product for now)-->
             <!-- will just reset after adding product for now as no backend connected -->
             <form id="productForm" class="product-form">
                 <div class="form-row">
@@ -79,12 +79,12 @@
 
                 <div class="form-row">
                     <label for="productDesc">Description</label>
-                    <textarea id="productDesc" placeholder="Description" name="Description" required></textarea>
+                    <textarea id="productDesc" placeholder="Description" name="description" required></textarea>
                 </div>
 
                 <div class="form-row">
                     <label for="productPrice">Price</label>
-                    <input id="productPrice" type="number" placeholder="$$" step="0.01" name="Price" required>
+                    <input id="productPrice" type="number" placeholder="$$" step="0.01" name="price" required>
                 </div>
 
                 <div class="form-row">

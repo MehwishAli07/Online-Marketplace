@@ -2,15 +2,10 @@
 
 // Toggle add form visibilty
 function toggleForm() {
-    // Get form element
     const form = document.getElementById("productForm");
-    if (form.style.display === "flex" || form.style.display === "") {
-        // Hide form
-        form.style.display = "none";
-    } else {
-        // Show form
-        form.style.display = "flex";
-    }
+    const isHidden = window.getComputedStyle(form).display === "none";
+
+    form.style.display = isHidden ? "flex" : "none";
 }
 
 // Show alert for submission of product
@@ -20,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
         e.preventDefault();
         // alert message
         alert('Product added!');
-        // Clear all form ino=puts
+        // Clear all form inputs
         this.reset();
         // hide form after submit
         toggleForm();
