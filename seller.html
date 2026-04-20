@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- meta tags for the browser and earch engines -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="BAYOUstore is an online marketplace where users can browse products, sell products, view product details,and manage purchasing with cart and checkout.">
+    <meta name="keywords" content="marketplace, shopping, products, ecommerce, BAYOUstore">
+    <title>BAYOUstore</title>
+    <!-- External CSS link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- header area -->
+    <header class="header">
+        <!-- navigation bar -->
+        <nav class="navbar">
+            <!-- Website logo: links back to the homepage -->
+            <a href="index.html" class="logo-link">
+                <img class="logo" src="images/logo_image.png" alt="BAYOUstore logo">
+            </a>
+
+            <!-- links to different website pages -->
+            <ul class="nav-links">
+                <!-- can go to seller page by clicking, just for frontend -->
+                <li><button onclick="location.href='seller.html'">Sell</button></li>
+                <li><button>Account</button></li>
+                <!-- cart button with an icon image -->
+                <li><button class="cart-button" onclick="location.href='cart.html'">
+                        <img src="images/cart.png" alt="Cart">
+                    </button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Search/fitler Section -->
+    <section class="search_container">
+        <search class="search-box">
+            <!-- Placeholder for the future filtering logic -->
+            <button type="button" class="filter-button">Filter</button>
+            <input class="search-input" type="search" placeholder="Search for products...">
+            <!-- submit button to trigger search -->
+            <button type="button" class="search-button">Go</button>
+        </search>
+    </section>
+
+    <!-- include the main content of the page -->
+    <main>
+        <!-- Seller profile information -->
+        <section class="seller-profile">
+            <figure class="seller-logo">
+                <img src="images/Seller_logo.png" alt="Shop logo">
+            </figure>
+
+            <div class="seller_name">
+                <h2>Paper Pals</h2>
+            </div>
+
+            <div class="seller-stats">
+                <p>Total Products: 2</p>
+                <p>Items Sold: 0</p>
+            </div>
+        </section>
+
+        <!-- Add product form -->
+        <section class="add-product">
+            <button class="add-btn" onclick="toggleForm()">+ Add Product</button>
+
+            <!-- Form for adding Product -->
+            <!-- will just reset after adding product for now as no backend connected -->
+            <form id="productForm" class="product-form">
+                <div class="form-row">
+                    <label for="productName">Product Name</label>
+                    <input id="productName" type="text" placeholder="Name" name="name" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="productDesc">Description</label>
+                    <textarea id="productDesc" placeholder="Description" name="Description" required></textarea>
+                </div>
+
+                <div class="form-row">
+                    <label for="productPrice">Price</label>
+                    <input id="productPrice" type="number" placeholder="$$" step="0.01" name="Price" required>
+                </div>
+
+                <div class="form-row">
+                    <label for="productImage">Upload image</label>
+                    <input id="productImage" type="file" name="image" accept="image/*">
+                </div>
+
+                <!-- Submit Button which will show alert message for now and reset form -->
+                <button type="submit" class="submit-btn">Submit</button>
+            </form>
+        </section>
+
+        <!-- added products which will be added later through backend-->
+         <!-- NO functionalities added to edit or delete at the moment -->
+        <!-- Products -->
+        <section class="seller-products">
+            <h2>Your Products</h2>
+
+            <!-- Product 1: Image + Details + Action Buttons -->
+            <article class="product-card">
+                <img src="images/Notebooks_popular.jpg" alt="Notebooks" class="product-img">
+                <div class="product-content">
+                    <div class="product-info">
+                        <h3>Name: Notebooks</h3>
+                        <p>Description: Premium spiral notebooks for school and office</p>
+                        <div class="product-price">$12.99</div>
+                    </div>
+                    <div class="product-action">
+                        <!--Action Buttons: have no function at the moment ,just shows alert-->
+                        <button class="action-btn edit-btn" onclick="editDemo()">Edit</button>
+                        <!-- Just shows confirm -->
+                        <button class="action-btn delete-btn" onclick="deleteDemo()">Delete</button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Product 2 -->
+            <article class="product-card">
+                <img src="images/pencils.jpg" alt="Pencils" class="product-img">
+                <div class="product-content">
+                    <div class="product-info">
+                        <h3>Name: Pencils</h3>
+                        <p>Description: HB #2 pencils - 12 pack</p>
+                        <div class="product-price">$3.49</div>
+                    </div>
+                    <div class="product-action">
+                        <button class="action-btn edit-btn" onclick="editDemo()">Edit</button>
+                        <button class="action-btn delete-btn" onclick="deleteDemo()">Delete</button>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+
+    <!-- Footer: with site details -->
+    <footer class="footer">
+        <ul class="footer_links">
+            <li><button onclick="openDialog('aboutBox')">ABOUT US</button></li>
+            <li><button onclick="openDialog('contactBox')">CONTACT</button></li>
+            <li><button onclick="openDialog('termsBox')">TERMS OF SERVICE</button></li>
+        </ul>
+    </footer>
+
+    <!-- Dialog boxes for links in footer -->
+    <!-- About dialog box -->
+    <dialog id="aboutBox">
+        <h2>About Us</h2>
+        <p><br>BAYOUstore is an online marketplace designed to connect buyers and sellers in a simple and convenient
+            way. Our platform allows users to explore a variety of products, view detailed information, and enjoy a
+            smooth shopping experience with secure and user-friendly features.</p>
+        <br>
+        <button onclick="closeDialog('aboutBox')">Close</button>
+    </dialog>
+
+    <!-- Conatact Information Diaolg box -->
+    <dialog id="contactBox">
+        <h2>Contact</h2>
+        <p><br><strong>Email:</strong>support@bayoustore.com
+            <strong>Helpline:</strong> +1 666-375981
+        </p>
+        <br>
+        <button onclick="closeDialog('contactBox')">Close</button>
+    </dialog>
+
+    <!-- terms of Service Dialog box -->
+    <dialog id="termsBox">
+        <h2>Terms of Service</h2>
+        <p><br>By using BAYOUstore, you agree to follow our terms and conditions. Users are responsible for providing
+            accurate information and using the platform respectfully. We aim to ensure a safe and reliable marketplace
+            experience, but we are not liable for any misuse or external transactions.</p><br>
+        <button onclick="closeDialog('termsBox')">Close</button>
+    </dialog>
+
+    <!-- External Javascript link -->
+    <script src="script.js"></script>
+    <script src="Seller_AddProd.js"></script>
+</body>
+
+</html>
