@@ -1,3 +1,19 @@
+
+/* The header and the header color for the shopping cart */
+.cart-header {
+    background-color: #f96b13;
+    color:white;
+}
+/* The second header and color for the product info, price, and quantity */
+.cart-secondheader
+{
+    background-color: #120568;
+    color:white;
+}
+/* The space between the words product info, price, and quantity*/
+.cart-secondheader span {
+    padding: 0 30px;
+}
 /* Reset default margin and padding for the whole page */
 * {
     margin: 0;

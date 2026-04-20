@@ -48,22 +48,23 @@
 
     <!-- include the main content of the page -->
     <main>
-    <h2 style="border: 2px solid black; background: #f96b13;color:white; display: inline-block; width: 100%; padding: 10px;">Shopping Cart</h2><br>
-    <h2 style="border: 2px solid black; background: #120568;color:white; display: inline-block; width: 40%; padding: 10px; text-align: center;">Product Info</h2>
-    <h2 style="border: 2px solid black; background: #120568;color:white; display: inline-block; width: 20%; padding: 10px; text-align: center;">Price</h2>
-    <h2 style="border: 2px solid black; background: #120568;color:white; display: inline-block; width: 20%; padding: 10px; text-align: center;">Quantity</h2><br>
-
-    <span style="border: 2px solid black; display:inline-block;width:100px;padding:10px;text-align:center;">Product</span>
-    <span style="border: 2px solid black; display:inline-block;width:20%;padding:10px;margin-left: 500 px;text-align:center;">$</span>
-    <span style="border: 2px solid black; display:inline-block;width:200px;padding:10px;text-align:center;">+#-</span><br><br>
-
-    <span style="border: 2px solid black; display:inline-block;width:100px;padding:10px;text-align:center;">Product</span>
-    <span style="border: 2px solid black; display:inline-block;width:200px;padding:10px; margin-left: 500 px; text-align:center;">$</span>
-    <span style="border: 2px solid black; display:inline-block;width:200px;padding:10px ;margin-left: 500 px; text-align:center;">+#-</span>
-    <br><br>
-    <span style="display:block;text-align:right;">
-    <button style="background:#f96b13; color:black;border:black; padding:40px 30px; cursor:pointer;" onclick="location.href='checkout.html'">Continue to Checkout</button>
-    </span>
+        <div class="cart-header">Shopping Cart</div>
+    </div>
+    <div class="cart-secondheader">
+        <span>Product Info</span>
+        <span>Price</span>
+        <span>Quantity</span>
+    </div>
+    <!--Super repetitive, but it gets the boxes to the place I want-->
+    <span style="display: inline-block;border: 2px solid black; width:100px;padding:10px;text-align:center;">Product</span>
+     <span style="display: inline-block;text-align:center;border: 2px solid black; width:150px;padding:10px; margin-left: 500 px; ;">$</span> 
+     <span style="display: inline-block;text-align:center;border: 2px solid black; width:150px;padding:10px ;margin-left: 500 px;;">-#+</span> <br>
+         <span style="display: inline-block;text-align:center;border: 2px solid black; width:100px;padding:10px;text-align:center;">Product</span>
+     <span style="display: inline-block;text-align:center;border: 2px solid black; width:150px;padding:10px; margin-left: 500 px;;">$</span> 
+     <span style="display: inline-block;text-align:center; border: 2px solid black; width:150px;padding:10px ;margin-left: 500 px;">-#+</span> <br><br>
+     <span style="display:block;text-align:right;"> 
+        <button style="background:#f96b13; color:black;border:solid black; padding:40px 30px; cursor:pointer;" onclick="location.href='checkout.html'">Continue to Checkout</button>
+     </span>
 
     </main>
 
