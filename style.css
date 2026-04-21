@@ -1,11 +1,4 @@
 
-/* Reset default margin and padding for the whole page */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 /* styling for the page to fill the full viewport and prevent overflow */
 html, body {
     min-height: 100vh;
