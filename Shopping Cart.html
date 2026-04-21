@@ -20,7 +20,7 @@
         <nav class="navbar">
             <!-- Website logo: links back to the homepage -->
             <a href="index.html" class="logo-link">
-                <img class="logo" src="images/logo_image.png" alt="BAYOUstore logo">
+                <img class="logo" src="logo_image.png" alt="BAYOUstore logo">
             </a>
 
             <!-- links to different website pages -->
@@ -29,7 +29,7 @@
                 <li><button>Account</button></li>
                 <!-- cart button with an icon image -->
                 <li><button class="cart-button" onclick="location.href='cart.html'">
-                        <img src="images/cart.png" alt="Cart">
+                        <img src="cart.png" alt="Cart">
                     </button></li>
             </ul>
         </nav>
@@ -55,15 +55,17 @@
         <span>Price</span>
         <span>Quantity</span>
     </div>
-    <!--Super repetitive, but it gets the boxes to the place I want-->
-    <span style="display: inline-block;border: 2px solid black; width:100px;padding:10px;text-align:center;">Product</span>
-     <span style="display: inline-block;text-align:center;border: 2px solid black; width:150px;padding:10px; margin-left: 500 px; ;">$</span> 
-     <span style="display: inline-block;text-align:center;border: 2px solid black; width:150px;padding:10px ;margin-left: 500 px;;">-#+</span> <br>
-         <span style="display: inline-block;text-align:center;border: 2px solid black; width:100px;padding:10px;text-align:center;">Product</span>
-     <span style="display: inline-block;text-align:center;border: 2px solid black; width:150px;padding:10px; margin-left: 500 px;;">$</span> 
-     <span style="display: inline-block;text-align:center; border: 2px solid black; width:150px;padding:10px ;margin-left: 500 px;">-#+</span> <br><br>
-     <span style="display:block;text-align:right;"> 
-        <button style="background:#f96b13; color:black;border:solid black; padding:40px 30px; cursor:pointer;" onclick="location.href='checkout.html'">Continue to Checkout</button>
+    <!--Box for the Product(Image not decided yet), the $ and the Quantity-->
+    <div class="ProductBox">
+    <ul>
+    <li>Product</li>
+    <li>$</li>
+    <li>-#+</li>
+    </ul>
+    </div>
+    <!--The button to continue to checkout as well as the size of said button-->
+  <span style="display:block;text-align:right;"> 
+        <button style="background:#f96b13; color:black;border:solid black; padding:25px 30px; cursor:pointer;" onclick="location.href='checkout.html'">Continue to Checkout</button>
      </span>
 
     </main>
