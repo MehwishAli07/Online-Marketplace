@@ -1,13 +1,4 @@
 
-
-/* mehwish stuff below.. the standards we agreed upon for the header, footer, search bar etc -----------------------------------------------------------*/
-/* Force headers and buttons to stop using browser defaults */
-h1, h2, h3, button, input {
-    font-family: inherit;
-    font-weight: 400; 
-}
-
-
 /* Reset default margin and padding for the whole page */
 * {
     margin: 0;
