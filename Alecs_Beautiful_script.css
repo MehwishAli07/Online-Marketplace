@@ -2,6 +2,13 @@
 /*Alec's product details page stuff below  ---------------------------------------------------------------------------------------------------*/
 /* ------------------------------------------------------------------------------------------------------------------------------------------*/
 
+/* reset default margin and padding for the whole page */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* apply our font ADLaM to the whole site so i don't have to reprogram that over and over -------------------------------------------------- */
 * {
     font-family: "ADLaM Display", system-ui, sans-serif;
