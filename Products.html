@@ -2,6 +2,20 @@
 <html lang="en">
 
 <head>
+<!-- this head stuff is a standard that our group decided on.. mehwish made it and sent it to everyone so it would be uniform-->
+<!-- begin head --------------------------------------------------------------------------------------------------------------->
+<head>
+
+    <!-- Alec's links to get us the font we decided on as a group--------------------------------------------------------------->
+    <!-- links to the font that we decided to use "ADLAM display"--------------------------------------------------------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=ADLaM+Display&display=swap" rel="stylesheet">
+
+    <!-- External CSS link -->
+    <link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="style-Product.css">
+
     <!-- meta tags for the browser and earch engines -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,8 +25,11 @@
     <title>BAYOUstore</title>
     <!-- External CSS link -->
     <link rel="stylesheet" href="style.css">
+	
+<!-- end head ------------------------------------------------------------------------------------------------------------------->
 </head>
 
+<!-- BEGIN BODY------------------------------------------------------------------------------------------------------------------>
 <body>
     <!-- header area -->
     <header class="header">
@@ -26,7 +43,17 @@
             <!-- links to different website pages -->
             <ul class="nav-links">
                 <li><button onclick="location.href='seller.html'">Sell</button></li>
-                <li><button>Account</button></li>
+				
+				<!-- Alec's drop down list for the account button that mehwish made --------------------------------------------->
+                <li>
+                    <button>Account</button>
+                    <ul>
+                        <li><button>Login/Signup</button></li>
+                        <li><button>Account</button></li>
+                        <li><button>Sign Out</button></li>
+                    </ul>
+                </li>
+
                 <!-- cart button with an icon image -->
                 <li><button class="cart-button" onclick="location.href='cart.html'">
                         <img src="../images/cart.png" alt="Cart">
@@ -139,6 +166,8 @@
 
     <!-- External Javascript link -->
     <script src="script-products.js"></script>
+	
+<!-- END BODY------------------------------------------------------------------------------------------------------------------>
 </body>
 
 </html>
