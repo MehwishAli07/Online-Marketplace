@@ -41,7 +41,7 @@ input[type="checkbox"] {
 	accent-color: #f96b13;
 }
 
-/* code to format the product display */
+/* code to format the product display (Caden Fontenot) */
 
 .product_container {
     display: grid;
