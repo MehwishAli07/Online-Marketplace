@@ -677,6 +677,24 @@ main .seller-profile {
     box-shadow: 0 6px 20px rgba(0,0,0,0.2);
 }
 
+/*Cart page :Solida  */
+
+/* The header and the header color for the shopping cart */
+.cart-header {
+    background-color: #f96b13;
+    color:white;
+}
+/* The second header and color for the product info, price, and quantity */
+.cart-secondheader
+{
+    background-color: #120568;
+    color:white;
+}
+/* The space between the words product info, price, and quantity*/
+.cart-secondheader span {
+    padding: 0 30px;
+}
+
 /* smallers screens layout adjustments */
 /* mobile responsive adjustments */
 @media (max-width: 768px) {
