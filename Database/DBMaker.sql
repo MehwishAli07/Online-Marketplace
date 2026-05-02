@@ -31,6 +31,7 @@ CREATE TABLE Product.Products(
 	productID INT IDENTITY(1,1) PRIMARY KEY,
 	productName VARCHAR(150) NOT NULL,
 	price DECIMAL(6,2) NOT NULL,
+	description VARCHAR(MAX),
 	sellerID INT NOT NULL,
 
 	CONSTRAINT FK_Products_Seller
